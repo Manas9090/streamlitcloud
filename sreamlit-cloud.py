@@ -4,8 +4,9 @@ from transformers import pipeline
 # Load the model
 @st.cache_resource
 def load_model():
-    return pipeline("text-generation", model="gpt2") 
-
+    #return pipeline("text-generation", model="gpt2")
+    return pipeline("generate response", model = "gpt2")
+     
 model = load_model() 
 
 # Streamlit app title
